@@ -1,73 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Blog — Station</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/small-logo.png">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Blogs - Home</title>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <div class="site" role="main">
-    <header class="site-header" role="banner">
-      <div class="brand">
-        <img src="/small-logo.png" alt="Logo">
-        <div>
-          <h1>My Content Station</h1>
-          <div class="tagline">Write • Learn • Build Revenue</div>
+  <header class="navbar">
+    <div class="logo">Ocean Blogs</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Ocean Blogs</h1>
+      <p>Where stories flow like waves 🌊</p>
+      <a href="services.html" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ocean Blogs | Built with passion 🌊</p>
+  </footer>
+
+  <section class="posts-section">
+  <h2 class="section-title">Latest Posts</h2>
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="images/post1.jpg" alt="Post 1">
+      <div class="card-content">
+        <h3>Writing Builds Personal Revenue</h3>
+        <p>Learn how writing consistently can attract readers and open new revenue paths like newsletters or sponsored posts.</p>
+        <div class="card-actions">
+          <button onclick="toggleLike(this)">👍 <span class="like-count">0</span></button>
+          <button onclick="submitComment(1)">💬 Comment</button>
         </div>
       </div>
-
-      <nav class="main-nav" role="navigation" aria-label="Primary">
-        <a href="#" class="active">Blog</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero" aria-label="Featured">
-      <div class="meta">Featured • Personal Development • Content & Revenue</div>
-      <h2>Why build content? Make writing your station</h2>
-      <p class="lead">Writing helps you clarify emotions, build personal growth, promote your brand, and create opportunities for additional revenue — whether you blog personally or as a third party for businesses. This is your station: a place that broadcasts your voice.</p>
-      <div class="cta">
-        <a class="btn" href="#">Explore posts</a>
-      </div>
-    </section>
-
-    <div class="layout">
-      <main class="posts" aria-label="Blog posts">
-        <!-- Posts will be generated dynamically -->
-      </main>
-
-      <aside class="sidebar" aria-label="Sidebar">
-        <h4>About this station</h4>
-        <p class="sidebar-text">Use your blog to teach, reflect, and sell. Keep headings clear, underline important lines for emphasis, and present a consistent URL structure like <code>/blog</code> and <code>/blog/my-post-slug</code>.</p>
-
-        <div>
-          <strong>Suggested URL structure</strong>
-          <ul>
-            <li><code>https://yourdomain.com/blog</code> — posts index</li>
-            <li><code>https://yourdomain.com/blog/why-write</code> — single post</li>
-            <li><code>https://yourdomain.com/about</code> — author / brand</li>
-          </ul>
-        </div>
-
-        <a class="btn" href="#">Learn more</a>
-      </aside>
     </div>
 
-    <footer>
-      © <span id="year"></span> My Content Station — Build, Write, Earn
-    </footer>
-  </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="images/post2.jpg" alt="Post 2">
+      <div class="card-content">
+        <h3>Turn Feelings into Ideas</h3>
+        <p>Journaling publicly helps you distill unique perspectives that readers can connect with.</p>
+        <div class="card-actions">
+          <button onclick="toggleLike(this)">👍 <span class="like-count">0</span></button>
+          <button onclick="submitComment(2)">💬 Comment</button>
+        </div>
+      </div>
+    </div>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+    <!-- Add more cards as needed -->
+  </div>
+</section>
 </body>
+
+<script src="main.js"></script>
+
 </html>
