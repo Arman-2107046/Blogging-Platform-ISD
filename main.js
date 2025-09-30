@@ -1,20 +1,10 @@
-// Toggle active nav link
-document.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll("nav a");
+// Set current year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  navLinks.forEach(link => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
-  });
-});
-
-// Example Like Button functionality
+// Like button toggle
 function toggleLike(button) {
   let countSpan = button.querySelector(".like-count");
   let count = parseInt(countSpan.textContent, 10);
-
   if (button.classList.contains("liked")) {
     button.classList.remove("liked");
     countSpan.textContent = count - 1;
@@ -24,28 +14,31 @@ function toggleLike(button) {
   }
 }
 
-// Example Comment Submission
+// Comment submission
 function submitComment(postId) {
-  const input = document.querySelector(`#comment-input-${postId}`);
-  const list = document.querySelector(`#comment-list-${postId}`);
-  
-  if (input.value.trim() !== "") {
-    const li = document.createElement("li");
-    li.textContent = input.value;
-    list.appendChild(li);
-    input.value = "";
+  const comment = prompt("Add your comment:");
+  if (comment && comment.trim() !== "") {
+    alert(`Your comment has been added: "${comment}"`);
   }
 }
 
-// Smooth scroll for navigation
-const navLinks = document.querySelectorAll("nav a[href^='#']");
-navLinks.forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href").slice(1);
-    const target = document.getElementById(targetId);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+// Flying Card Logo API (simulated)
+function fetchLogo() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("images/logo-sample.png");
+    }, 500);
   });
+}
+
+const flyingCard = document.getElementById("flyingCard");
+const logoImage = document.getElementById("logoImage");
+
+flyingCard.addEventListener("mouseenter", async () => {
+  const logoUrl = await fetchLogo();
+  logoImage.src = logoUrl;
+});
+
+flyingCard.addEventListener("mouseleave", () => {
+  logoImage.src = "";
 });
