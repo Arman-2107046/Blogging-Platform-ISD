@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -10,7 +10,7 @@
   <!-- Loader -->
   <div id="loader">
     <div class="loader-logo">
-      <img src="/small-logo.png" alt="Logo">
+      <img src="images/logo/Blog.jpg" alt="Content Station Image">
     </div>
   </div>
 
@@ -18,7 +18,7 @@
   <div id="main-content" class="hidden">
     <header class="site-header">
       <div class="brand">
-        <img src="/small-logo.png" alt="Logo">
+        <img src="images/logo/Main.jpg" alt="Content Station Image">
         <div>
           <h1>My Content Station</h1>
           <div class="tagline">Write • Learn • Build Revenue</div>
@@ -42,19 +42,19 @@
       </div>
     </section>
 
+    <!-- ✍️ New Post Section -->
+    <section class="new-post">
+      <h3>Create a New Post</h3>
+      <form id="postForm">
+        <input type="text" id="postTitle" placeholder="Enter title" required><br><br>
+        <textarea id="postContent" placeholder="Write your post..." rows="5" required></textarea><br><br>
+        <button type="submit" class="btn">Publish</button>
+      </form>
+    </section>
+
     <div class="layout">
       <main class="posts">
-        <article>
-          <time datetime="2025-09-27">Sep 27, 2025</time>
-          <h3>How writing creates personal revenue</h3>
-          <p class="summary">Writing builds authority, attracts an audience, and opens revenue paths — membership, paid newsletters, sponsored posts, or product sales.</p>
-        </article>
-
-        <article>
-          <time datetime="2025-09-15">Sep 15, 2025</time>
-          <h3>Turn feelings into ideas — the habit of journaling publicly</h3>
-          <p class="summary">When you write down emotions, you distill unique perspectives that readers connect with — that connection is the seed of brand trust.</p>
-        </article>
+        <!-- Posts will be inserted here dynamically -->
       </main>
 
       <aside class="sidebar">
