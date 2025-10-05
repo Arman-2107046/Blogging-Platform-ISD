@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Posts</title>
-  <link rel="stylesheet" href="blog.css">
-</head>
-<body>
-  <div class="blog-container">
-    <h2>📚 All Blog Posts</h2>
-    <div class="filters">
-      <input type="text" id="search" placeholder="Search posts...">
-      <select id="filterCategory">
-        <option value="">All Categories</option>
-        <option value="Tech">Tech</option>
-        <option value="Lifestyle">Lifestyle</option>
-        <option value="Education">Education</option>
-        <option value="Travel">Travel</option>
-      </select>
-    </div>
-    <div id="postsList"></div>
-  </div>
 
-  <script src="blog.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MyPremiumBlog</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Content -->
+    <section class="blog-details" id="blog-details"></section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 MyPremiumBlog | All rights reserved.</p>
+    </footer>
+
+    <script src="blog.js"></script>
 </body>
+
 </html>

@@ -1,63 +1,90 @@
+/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: #f5f7fa;
-  color: #333;
+    background: #f5f7fa;
+    color: #333;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 3rem;
-  background: #111;
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: #111;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
 }
 
 /* Blog Details */
 .blog-details {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
 .blog-details img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
 }
+
 .blog-details h2 {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
 .blog-details p {
-  line-height: 1.6;
-  color: #555;
+    line-height: 1.6;
+    color: #555;
 }
+
 .meta {
-  font-size: 0.85rem;
-  color: #999;
-  margin-bottom: 0.5rem;
-  display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+    display: block;
 }
+
 .intro {
-  font-style: italic;
-  margin-bottom: 1.2rem;
-  color: #555;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    color: #555;
 }
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #111;
-  color: white;
-  margin-top: 3rem;
+    text-align: center;
+    padding: 1.5rem;
+    background: #111;
+    color: white;
+    margin-top: 3rem;
 }
